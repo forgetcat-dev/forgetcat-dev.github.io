@@ -21,20 +21,35 @@
     </style>
 </head>
 <body>
-    <a href="index.html" class="back">← 返回</a>
+<div class="container" id="comic-pages">
+    <!-- 这里会自动填充图片 -->
+</div>
 
-    <div class="container">
-        <!-- 把你的图片路径填这里，按顺序 -->
-        <img src="jia.png" alt="第1页">
-        <!-- 加更多页就继续复制 <img src="page4.jpg" ... > -->
-    </div>
+<script>
+    // 把你的所有图片文件名写在这里（按顺序！）
+    const pages = [
+        "page001.png",
+        "page002.png",
+        "page003.png",
+        "page004.png",
+        "page005.png",
+        "page006.png",
+        "page007.png",
+        // 继续加... 每行一个文件名，用逗号分隔，最后一行不要逗号
+        "page100.png"
+    ];
 
-    <script>
-        // 可选：键盘左右箭头翻页（手机不用）
-        document.addEventListener('keydown', e => {
-            if (e.key === 'ArrowRight') window.scrollBy(0, window.innerHeight);
-            if (e.key === 'ArrowLeft') window.scrollBy(0, -window.innerHeight);
-        });
-    </script>
+    const container = document.getElementById("comic-pages");
+
+    pages.forEach((filename, index) => {
+        const img = document.createElement("img");
+        img.src = filename;                // 图片路径
+        img.alt = `第${index + 1}页`;      // 自动生成 alt="第1页" "第2页"...
+        img.style.width = "100%";          // 占满宽度
+        img.style.display = "block";
+        img.style.margin = "0 auto";
+        container.appendChild(img);
+    });
+</script>
 </body>
 </html>
