@@ -3,23 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>我的第一个网页 - jia</title>
+    <title>jia 的漫画世界</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            padding: 100px 20px;
-            background-color: #f8f9fa;
-            color: #333;
+        body { 
+            font-family: Arial, sans-serif; 
+            margin: 0; 
+            padding: 0; 
+            background: #111; 
+            color: #eee; 
+            text-align: center; 
         }
-        h1 { color: #007bff; }
-        p { font-size: 1.2em; }
+        header { 
+            padding: 40px 20px; 
+            background: linear-gradient(to bottom, #222, #000); 
+        }
+        h1 { color: #ff69b4; } /* 粉色标题，灰原哀风 */
+        .comic-list { 
+            max-width: 800px; 
+            margin: 40px auto; 
+            padding: 0 20px; 
+        }
+        .episode { 
+            background: #222; 
+            margin: 20px 0; 
+            padding: 20px; 
+            border-radius: 10px; 
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5); 
+        }
+        a { color: #4da6ff; text-decoration: none; font-size: 1.3em; }
+        a:hover { color: #ff69b4; }
+        footer { padding: 20px; font-size: 0.8em; color: #888; }
     </style>
 </head>
 <body>
-    <h1>Hello, World! 🌟</h1>
-    <p>这是 jia 的第一个 GitHub Pages 网页！<br>2026年1月19日，香港。</p>
-    <p>网站已上线：https://forgetcat-dev.github.io</p>
-    <p>接下来可以在这里加照片、介绍自己、作品链接等～</p>
+    <header>
+        <h1>jia 的漫画世界 🌟</h1>
+        <p>用 AI 生成的灰原哀小故事 / 日常漫画</p>
+    </header>
+
+    <div class="comic-list">
+        <div class="episode">
+            <h2>第1话：灰原的雨天</h2>
+            <p>短篇，垂直滚动阅读</p>
+            <a href="comic1.html">开始阅读 →</a>
+        </div>
+        
+        <!-- 以后加第2话就复制上面 div，改链接和标题 -->
+        <!-- <div class="episode"> ... </div> -->
+    </div>
+
+    <footer>
+        © 2026 jia | Hosted on GitHub Pages | <a href="https://github.com/forgetcat-dev/jiahk.github.io">源代码</a>
+    </footer>
 </body>
 </html>
